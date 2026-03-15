@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahina's Scenes — The Star Whisperers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Shahina cyan override — same cyan, just confirm per-page */
+        
+        .actor-title span {
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+        }
+        
+        .actor-hero::before {
+            background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0, 234, 255, 0.12) 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-transition" id="page-transition"></div>
+    <div class="scanline-effect"></div>
+    <div id="progress-bar"></div>
+    <canvas id="starfield"></canvas>
+
+    <nav>
+        <a href="index.html" class="nav-logo">★ STAR WHISPERERS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="amirbek.html">Amirbek</a></li>
+            <li><a href="shahina.html">Shahina</a></li>
+            <li><a href="kristina.html">Kristina</a></li>
+            <li><a href="akbarhon.html">Akbarhon</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="amirbek.html">Amirbek</a>
+        <a href="shahina.html">Shahina</a>
+        <a href="kristina.html">Kristina</a>
+        <a href="akbarhon.html">Akbarhon</a>
+    </div>
+
+    <div class="page-content">
+
+        <section class="actor-hero">
+            <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,234,255,0.12) 0%, transparent 70%);pointer-events:none"></div>
+            <div class="actor-icon">💻</div>
+            <div class="hero-badge">SAHNA · SCREENPLAY</div>
+            <h1 class="actor-title"><span>Shahina</span>'s Scenes</h1>
+            <p class="actor-subtitle">"This is what Shahina must read aloud."</p>
+            <div style="display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap">
+                <a href="index.html" class="back-btn">← Bosh sahifa / Home</a>
+                <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;color:var(--text-dim)">
+                    ROLE: <span style="color:var(--neon-cyan)">SMART CODER</span>
+                </div>
+            </div>
+        </section>
+
+        <div style="max-width:900px;margin:0 auto 2rem;padding:0 1.5rem;display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;position:relative;z-index:1">
+            <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:12px;height:12px;background:var(--neon-cyan);border-radius:2px;box-shadow:var(--neon-glow-cyan)"></div>
+                <span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;color:var(--text-dim)">SHAHINA'S LINES (click to glow)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:12px;height:12px;background:rgba(255,255,255,0.15);border-radius:2px"></div>
+                <span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;color:var(--text-dim)">OTHER CHARACTERS</span>
+            </div>
+        </div>
+
+        <div class="screenplay-wrapper">
+
+            <!-- SCENE 1 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 01</span>
+                    <span class="scene-title">Discovering the Stones</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        EXT. OLD TASHKENT ALLEYWAY — DUSK. The city buzzes with neon-lit evening traffic. Beneath the crumbled pavement, four stones pulse with impossible blue light. The team gathers, cautious and awestruck.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Wait — everyone stop. Do you hear that? It's like… a voice, but not from anyone here. It's coming from the ground.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">A voice? Amirbek, you're hearing things. It's probably a broken gas pipe or some underground cable.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">No, wait — she's wrong. I hear it too. Something is whispering. And those stones… they're glowing.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(kneels, pulls out a sensor device)</em> Thermal reading is off the charts. These aren't minerals from Earth. The crystal lattice is… entirely unknown to science.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AKBARHON</div>
+                        <div class="speech">Great! Unknown alien rocks. I'll just add that to the list of things that are definitely not dangerous.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">Don't be dramatic. Until we have data, we make no assumptions. <em>(picks up her stone carefully)</em> But I'm running a full spectral analysis the moment we get back.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SCENE 2 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 02</span>
+                    <span class="scene-title">Decoding the Star Messages</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        INT. SHAHINA'S BEDROOM — NIGHT. Every screen blazes with alien code. Holographic rings float from the stones as Shahina's fingers blur across her keyboard. The whispers have become a coherent signal.
+                    </p>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">I've isolated the frequency. It's not random noise — these are structured pulses. Binary, but with a third state. Whoever sent this is not from Earth.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Then what are they saying? Shahina, translate it. We need to know if we're in danger.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(squinting at the screen)</em> I'm building the translation matrix now. The message repeats — it's a warning. And… coordinates. These coordinates are ours. They know exactly where we are.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">Look at the map — the signal is pointing directly at Tashkent. We're the target.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">Not just a target — a convergence point. Something is using our electromagnetic field as a doorway. And the window opens in… <em>(goes pale)</em> …fourteen hours.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AKBARHON</div>
+                        <div class="speech">Fourteen hours. Cool, cool. Plenty of time for panic.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SCENE 3 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 03</span>
+                    <span class="scene-title">Cosmic Danger</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        EXT. CHORSU ROOFTOP — MIDNIGHT. A tear in space opens above the city. The void entity's mass distorts the air around it. Electromagnetic chaos crackles. Shahina's device screams warnings. They have only minutes.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">It's here. It's actually here. The rift is 200 metres wide and growing. Amirbek — what do we do?!</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">The stones resonate at the same frequency as the entity's core signature. If we synchronise all four — we might be able to push it back.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Then we synchronise. All of us. Together. NOW!</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(types last command into her device, then clutches her stone)</em> Resonance protocol initiated. I've linked all four stones through the device. The moment we align our focus — it fires.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AKBARHON</div>
+                        <div class="speech">What if it doesn't work? What if this is just how it ends?</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">It will work. The mathematics are sound. I trust the data. <em>(looks up at the void)</em> Now I need to trust us.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SCENE 4 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 04</span>
+                    <span class="scene-title">Saving Tashkent</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        EXT. CHORSU ROOFTOP — DAWN. Starlight floods through the closing rift. The entity dissolves. Shahina watches her screen as every reading normalises. Silence replaces the chaos. Slowly, Tashkent stirs back to life below.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">It's working. Don't let go — whatever you do, don't let go!</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">The rift is collapsing! Thirty percent… fifty… it's sealing!</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">Signal confirmed — the entity is retreating. The stars… they're answering back. We did it.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AKBARHON</div>
+                        <div class="speech">So… same time next week?</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">SHAHINA <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(reads the final readout, then closes her laptop softly)</em> The stones are dormant now. The message from the stars… it says "well done." <em>(pause)</em> I didn't expect that part.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Tashkent is still standing. And so are we. That's enough. That's everything.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:3rem">
+                <a href="index.html" class="back-btn">← Return to Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-title">★ THE STAR WHISPERERS</div>
+        <div class="footer-sub" style="margin-top:0.5rem">Young Filmmakers Competition · Tashkent · 2024</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

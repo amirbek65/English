@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akbarhon's Scenes — The Star Whisperers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .actor-title span {
+            color: #fbbf24;
+            text-shadow: 0 0 10px #fbbf24, 0 0 25px #f59e0b;
+        }
+        
+        .dialogue-line.my-line {
+            background: rgba(251, 191, 36, 0.05);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+        
+        .dialogue-line.my-line .char-name {
+            color: #fbbf24;
+            text-shadow: 0 0 10px #fbbf24;
+        }
+        
+        .badge-myline {
+            background: #f59e0b;
+            color: #0a0a0a;
+        }
+        
+        @keyframes lineGlowGold {
+            0% {
+                box-shadow: 0 0 0px rgba(251, 191, 36, 0);
+            }
+            30% {
+                box-shadow: 0 0 30px rgba(251, 191, 36, 0.6), inset 0 0 20px rgba(251, 191, 36, 0.08);
+            }
+            100% {
+                box-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
+            }
+        }
+        
+        .dialogue-line.my-line.glowing {
+            animation: lineGlowGold 1.5s ease forwards;
+        }
+        
+        #progress-bar {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            box-shadow: 0 0 10px #fbbf24;
+        }
+        
+        .hero-badge {
+            color: #fbbf24;
+            border-color: rgba(251, 191, 36, 0.4);
+            background: rgba(251, 191, 36, 0.06);
+        }
+        
+        .scene-number {
+            color: #fbbf24;
+            border-color: rgba(251, 191, 36, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-transition" id="page-transition"></div>
+    <div class="scanline-effect"></div>
+    <div id="progress-bar"></div>
+    <canvas id="starfield"></canvas>
+
+    <nav>
+        <a href="index.html" class="nav-logo">★ STAR WHISPERERS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="amirbek.html">Amirbek</a></li>
+            <li><a href="shahina.html">Shahina</a></li>
+            <li><a href="kristina.html">Kristina</a></li>
+            <li><a href="akbarhon.html">Akbarhon</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="amirbek.html">Amirbek</a>
+        <a href="shahina.html">Shahina</a>
+        <a href="kristina.html">Kristina</a>
+        <a href="akbarhon.html">Akbarhon</a>
+    </div>
+
+    <div class="page-content">
+
+        <section class="actor-hero">
+            <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(251,191,36,0.08) 0%, transparent 70%);pointer-events:none"></div>
+            <div class="actor-icon">⚙️</div>
+            <div class="hero-badge">SAHNA · SCREENPLAY</div>
+            <h1 class="actor-title"><span>Akbarhon</span>'s Scenes</h1>
+            <p class="actor-subtitle">"This is what Akbarhon must read aloud."</p>
+            <div style="display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap">
+                <a href="index.html" class="back-btn">← Bosh sahifa / Home</a>
+                <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;color:var(--text-dim)">
+                    ROLE: <span style="color:#fbbf24">FUNNY INVENTOR</span>
+                </div>
+            </div>
+        </section>
+
+        <div style="max-width:900px;margin:0 auto 2rem;padding:0 1.5rem;display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;position:relative;z-index:1">
+            <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:12px;height:12px;background:#fbbf24;border-radius:2px;box-shadow:0 0 8px #fbbf24"></div>
+                <span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;color:var(--text-dim)">AKBARHON'S LINES (click to glow)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:12px;height:12px;background:rgba(255,255,255,0.15);border-radius:2px"></div>
+                <span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;color:var(--text-dim)">OTHER CHARACTERS</span>
+            </div>
+        </div>
+
+        <div class="screenplay-wrapper">
+
+            <!-- SCENE 1 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 01</span>
+                    <span class="scene-title">Discovering the Stones</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        EXT. OLD TASHKENT ALLEYWAY — DUSK. Akbarhon trails behind the group, backpack clinking with half-built gadgets. He nearly trips on the crumbled pavement — and that's when everyone sees the glow rising from the rubble.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Wait — everyone stop. Do you hear that? It's coming from the ground.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">A voice? Amirbek, you're hearing things. It's probably a broken gas pipe or some underground cable.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">No, wait — she's wrong. I hear it too. Something is whispering. And those stones… they're glowing.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">We pick them up. All four of us, at the same time. On three. One… two… three!</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">Bold plan, fearless leader! What could possibly go wrong? Other than, you know, an alien takeover?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Akbarhon — serious, please! It's warm. Like it's been waiting for us.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(holding up the stone, which hums against his palm)</em> Okay, seriously though — my scanner is going berserk. This thing is emitting a frequency I've never seen. Also it tickles. Is it supposed to tickle?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">Thermal reading is off the charts. These aren't minerals from Earth.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">Great! Unknown alien rocks. I'll just add that to the list of things that are definitely not dangerous. Right after the time I built a rocket out of a vacuum cleaner.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SCENE 2 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 02</span>
+                    <span class="scene-title">Decoding the Star Messages</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        INT. SHAHINA'S BEDROOM — NIGHT. Akbarhon has assembled a cobbled-together device that somehow interfaces with the stones. He claims it was "all planned." Shahina looks at it and visibly winces. It works anyway.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">I've isolated the frequency — whoever sent this is not from Earth.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Target for what? Are they warning us, or marking us?</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">My stone just got hotter. And it showed me something — a dark mass, spiraling toward the solar system. That's not a metaphor, by the way.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">The window opens in… fourteen hours.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">Fourteen hours. Cool, cool. Plenty of time for panic. <em>(claps hands together)</em> Right. I've already started building something. I call it the Resonance Amplifier. Shahina, don't look at it directly.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech"><em>(looks at it, immediately looks away)</em> Akbarhon, is that duct tape holding together a satellite dish and a blender?</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">A very important blender. <em>(pause)</em> It also makes smoothies. Multi-purpose. Very efficient. <em>(the device hums perfectly)</em> See? Genius.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SCENE 3 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 03</span>
+                    <span class="scene-title">Cosmic Danger</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        EXT. CHORSU ROOFTOP — MIDNIGHT. The void entity descends. The city below has gone eerily quiet. Akbarhon's gadget whirs frantically. For once, the jokes come out smaller — because this is, clearly, the real thing.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">It's here. It's actually here. The rift is 200 metres wide and growing. Amirbek — what do we do?!</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">We stand our ground. If we run, everyone in this city disappears!</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">The stones resonate at the same frequency as the entity. If we synchronise all four — we might push it back.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">For the record, I always knew my life would end on a rooftop. I just assumed it involved a kite.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Focus! Give it everything you've got. Every last bit.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">What if it doesn't work? What if this is just how it ends? <em>(quiet moment)</em> I don't want it to end. Not yet. There are too many things I haven't built yet.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">It will work. The mathematics are sound. I trust the data. Now I need to trust us.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(nods, clutches stone tightly, and actually looks serious for the first time)</em> Okay. Let's save Tashkent. Again, for the record — this was all part of my plan.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SCENE 4 -->
+            <div class="scene-block fade-in">
+                <div class="scene-header">
+                    <span class="scene-number">SCENE 04</span>
+                    <span class="scene-title">Saving Tashkent</span>
+                </div>
+                <div class="scene-body">
+                    <p class="scene-direction">
+                        EXT. CHORSU ROOFTOP — DAWN. The void dissolves. The rift seals. Silence floods back. Akbarhon's device sparks once, then dies. He doesn't care. He's staring at the sunrise over Tashkent, and for maybe the first time, he has nothing to say.
+                    </p>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">It's working. Don't let go — whatever you do, don't let go!</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">KRISTINA</div>
+                        <div class="speech">The rift is collapsing! Thirty percent… fifty… it's sealing!</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">SHAHINA</div>
+                        <div class="speech">Signal confirmed — the entity is retreating. The stars… they're answering back. We did it.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech">So… same time next week? <em>(everyone laughs, exhausted and relieved)</em></div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="char-name">AMIRBEK</div>
+                        <div class="speech">Tashkent is still standing. And so are we. That's enough. That's everything.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(looks at the now-dead device in his hands, then tosses it gently into his bag)</em> You know what's funny? The blender part actually worked perfectly. Not a single smoothie was harmed in saving the galaxy.</div>
+                    </div>
+
+                    <div class="dialogue-line my-line" title="Click to glow!">
+                        <div class="char-name">AKBARHON <span class="badge-myline">MY LINE</span></div>
+                        <div class="speech"><em>(pause — looks at the glowing stone, now dim, nestled in his palm)</em> Thanks for picking me, little rock. I didn't think I'd be the type. But… here we are.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:3rem">
+                <a href="index.html" class="back-btn">← Return to Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-title">★ THE STAR WHISPERERS</div>
+        <div class="footer-sub" style="margin-top:0.5rem">Young Filmmakers Competition · Tashkent · 2024</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
